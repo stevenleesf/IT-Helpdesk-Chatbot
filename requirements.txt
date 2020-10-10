@@ -36,7 +36,7 @@ Markdown==3.2.2
 mccabe==0.6.1
 mkl-fft==1.0.6
 mkl-random==1.0.1.1
-mkl-service==2.3.0
+python-mkl-service==2.3.0
 mysql-connector-python==8.0.18
 nb-conda==2.2.1
 nbformat==5.0.7
