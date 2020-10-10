@@ -1,0 +1,263 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "Hello", "Hola","Hey","Hi", "Hello", "Good morning","Good Evening"],
+         "responses": ["Hello, Welcome to Our IT Chatbot", "Good to see you, Welcome to our IT Chatbot", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time","Bye Chatbot"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon.","Happy to help"],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help! Any other issues?", "Any time! Any other issues I can help with?", "My pleasure! Any other Issues I can help with?"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": ["q","random"],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered","What services do you provide?","What can you help me with"],
+         "responses": ["I can guide you through\n 1)Password Reset\n2) Trouble-Shooting issues\n3) Virus Issues\n4) Printing Issues\n5) many more IT issues", "Offering support for \n1) Password Reset\n2) Trouble-Shooting issues\n3) Virus Issues\n4) Printer issues\n5) Other IT tasks"],
+         "context": [""]
+        },
+        {"tag": "Password Reset",
+         "patterns": ["How to reset my password?","I’m unable to log in!","My Password is Lost, need to Reset.","Open password reset module", "Reset my password", "Forgot password", "how do i reset my password?","Hi,I have problem with my password","Problem with Login ID" ],
+         "responses": ["Confirm your email address"],
+         "context_set": ["email"]
+        },
+        {"tag": "E-mail id",
+         "patterns": ["@gmail.com", "@outlook.com", "@yahoo.com", "@hotmail.in"],
+         "responses": ["The reset pin has been sent on your registered mobile number"],
+         "context_filter": ["email"]
+        },
+        
+        {"tag": "Blue Sreen issue",
+         "patterns": ["I’ve got the dreaded blue screen of death!","blue screen issue"],
+         "responses": ["This problem is usually related to hardware or a driver that is not working correctly. It usually happens after you install a new piece of hardware or update some drivers.","Simply rebooting can fix the blue screen of death (or STOP error, as it is otherwise known).","rebooting can help the issue"],
+         "context": [""]
+        },
+        {"tag": "Deleted files",
+         "patterns": ["I deleted some important files!", "Find my deleted files", "removed neccesary files","I by mistake deleted my folders","Can you help me with deleted files issue","I am unable to find my files"],
+         "responses": ["The first step is to check the recycle bin. If that fails, you can contact your IT Support partner."],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "Unsaved Document",
+         "patterns": ["I just closed my document without saving!","Unsaved Document","Forgot to save my work"],
+         "responses": ["However, all your work is not definitely lost. If you have Auto-Recover options enabled in Microsoft Office, then there are some easy steps to recover your work.\nIf not, you can also search for Word backup files by clicking “open”, “computer” and then browsing to the folder where the file was last saved.\nYou may also be able to find your file by performing a search on your computer for temporary files with a .tmp file extension or a ~ prefix."],
+         "context": [""]
+        },
+        {"tag": "Slow Computer",
+         "patterns": ["Slow Computer", "My computer is running too slowly!", "Computer is not fast"],
+         "responses": ["Here are my 10 quick tips for things you can do to speed up your PC\n1. Cut down on start-up items\n2. Uninstall programs you no longer use\n3. Clean up your hard drive\n4. Clean your browser\n5. Scan for and remove malware\n6. Adjust for better performance\n7. Defrag your hard drive\n8. Add more RAM.\n9. Upgrade to an SSD drive\n10. Don’t shut down, use Hibernate "],
+         "context": [""]
+        },
+        {"tag": "Unexpected Shut Down",
+         "patterns": ["My computer just shut down unexpectedly!","computer shut down unexpected","Computer keeps shutting down","computer shutdown","pc shutdown"],
+         "responses": ["This could be related to overheating. Check your computer for dust, and make sure it is in a cool and ventilated place. If this is not the issue, then it is likely a virus problem. Disconnect the PC from any networks and call your IT Support experts!"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "Printing issues",
+         "patterns": ["I can’t print anything!","Printing issue","My printer isn’t printing","Can’t seem to use my department’s printer"],
+         "responses": ["Check the printer is turned on, has paper, has ink/toner, paper in the correct tray etc.","\nIf its not an obvious issue, there may be a connection problem-the printer is probably not connected to the network properly, so call your IT Support helpdesk for help."],
+         "context": [""]
+        },
+        {"tag": "Vague",
+         "patterns": ["Nothing works","I have issues","I need Help","I have problems"],
+         "responses": ["Hey, I cant seems that you have not listed you Issue here.\n I can help you out with the following issues: \n 1)Password Reset\n 2) Trouble-Shooting issues\n 3) Virus Issues \n 4)Printing Issues and many more IT issues"],
+         "context": [""]
+        },
+        {"tag": "Virus",
+         "patterns": ["I have virus in my laptop","Virus issues","Computer has a virus","I have problems"],
+         "responses": ["A detailed step by step guide to remove the virus from the computer has been provided on the following link: \nhttps://www.easeus.com/file-recovery/remove-virus-without-antivirus.html \nand\nhttps://www.pcworld.com/article/243818/how-to-remove-malware-from-your-windows-pc.html\nIf the issues are still there, consult the IT team"],
+         "context": [""]
+        },
+        {"tag": "Mouse",
+         "patterns": ["My Mouse is not working","The mouse is dead","Bluetooth mouse not working","Mouse issues","trackpad not working","I need help with trackpad problems"],
+         "responses": ["a) If you encounter a mouse problem, you should first try these options:\n1) If it is a first-time issue, restarting your PC can resolve the issue instantly.\n2) Confirm that the mouse or the wireless adaptor is firmly connected to the PC.\n3) You may also try to unplug the mouse cable or the wireless adaptor and reconnect using a different port.\n4)Check the mouse and the ports for damages and even try the mouse on a different computer.\n4 If none of these solves the problem, you can now proceed to other solutions.\nb) Troubleshoot Hardware and Devices\nc) Updating Incompatible Mouse Drivers\nd) Roll Back or Reinstall Mouse Drivers\ne) Deactivate Enhanced Pointer Precision\nf) Adjusting the Mouse Sensitivity\ng) Configure Touchpad Delay\nh) Disable Touchpad"],
+         "context": [""]
+        },
+        {"tag": "USB",
+         "patterns": ["My computer does not recognise my USB device!","Okay so i need help with pendrive","USB issues","Pendrive issues","pendrive is not detected"],
+         "responses": ["First things to check are:\n1) Does the device work in a different USB port on the machine?\n2) Are other devices recognised in that port?\n3) Does the device work on another user’s machine?\n If you have tried these troubleshooting methods and still no luck, then your IT support help-desk can proceed with some more in-depth troubleshooting."],
+         "context": [""]
+        },
+        {"tag": "Slow Internet",
+         "patterns": ["My internet is really slow!","slow internet","Cannot connect to Internet","Internet is not fast","My Wi-Fi keeps dropping"],
+         "responses": ["If you're connecting wirelessly, then the location may be the problem. The signal is not necessarily strong in all corners of the building. Similarly, you could just be too far away. If this is not the issue, then spyware or viruses are a likely cause."],
+         "context": [""]
+        },
+
+        {
+          "tag": "Booting Up Problem",
+          "patterns": [ "My computer does not turn on, what do I do now?", "Computer won't boot up", "What can i do?, my computer not booting up" ],
+          "responses": [ "If you're connecting wirelessly, then the location may be the problem. The signal is not necessarily strong in all corners of the building. Similarly, you could just be too far away. If this is not the issue, then spyware or viruses are a likely cause." ],
+          "context": [ "" ]
+
+        },
+
+        {
+          "tag": "Crash Problem",
+          "patterns": [ "What do I do when my computer crashes?", "Computer Crash", "What can i do?, my computer crash" ],
+          "responses": [ "There are many reasons why a computer may just stop working or freeze. Most of the time there isn't much we can do about it, it is a fact of life that computer programs have become so complex that occasionally users will experience problems even when performing common tasks. When your computer no longer responds to keyboard commands your best bet is to restart the computer." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Hardware Fails",
+          "patterns": [ "What do I do if my hard disk fails to work", "Hardware Fail", "What can i do?, my computer hardware fails" ],
+          "responses": [ "As with most computer errors, your first step is to shut down your computer and restart it. This will help you determine whether or not you actually have a hard disk problem. If the disk is severely damaged then your computer will probably fail to restart properly. If this is the case then contact MCWare IT Solutions, this is a job for the professionals." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Monitor Fails",
+          "patterns": [ "There is no display on the monitor, what do I do now?", "Monitor Fails", "What can i do?, my monitor not working" ],
+          "responses": [ "Make sure the monitor is on. If no power light (green or orange light) is seen on the monitor display try pressing the power button until it comes on. If your computer monitor was on and you stepped away from the computer and upon returning it was black, it's likely that the computer is asleep. Try moving your mouse, clicking the mouse buttons, and/or pressing any key (space bar) on the keyboard to wake it up. Make sure that the monitor is connected properly to the back of the computer." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Image Distored or Skewed",
+          "patterns": [ "What do I do if the image on my monitor is distorted or skewed?", "Monitor is distorted or skewed?", "What can i do?, my monitor is distorted or skewed?" ],
+          "responses": [ "You may receive a distorted image when the cable is loose or defective. Disconnect the video cable going from the back of the computer and verify that no pins are bent, burnt or broken. Once verified re-connect the monitor cable. If the refresh rate is not properly set the monitor may have a wavy or an appearance that lines are going down or across the monitor slowly or fast, this may also cause a flickering affect. A distorted image can be caused by magnetic or other types of interference. Verify no speakers, fans or other magnetic devices are close to the monitor." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "No signal input",
+          "patterns": [ "I get a 'no signal input' message on my monitor, what do I do?", "No signal input", "What can i do?, my monitor display no signal input?" ],
+          "responses": [ "Verify that the monitor is properly connected in the back of the monitor as well as to the back of the computer. If the monitor appears to be connected properly, verify that a cable is not loose by disconnecting all cables that can be disconnected in the back of the monitor (generally the data cable cannot be disconnected). Next, disconnect the data cable connected to the back of the computer and then reconnect the cable. When connecting the cable in the back of the computer ensure the cable connection is tight. Most Computers will also have screw ends that can be screwed in to hold the connector in place." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Black borders on my monitors screen",
+          "patterns": [ "There are black borders on my monitors screen, what do I do?", "Monitor has black borders", "What can i do?, my monitor has black borders?" ],
+          "responses": [ "If the resolution was recently changed it is possible for the monitor to not auto adjust or shift to the correct size. If this occurs, the resolution can be changed back to the original setting or you can manually adjust the monitor. If a black border exists on the monitor it can generally be resolved by manually adjusting the horizontal or vertical width. Because each monitor is different, the method of adjusting this setting will vary; consult your monitor documentation." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Safe mode",
+          "patterns": [ "How do I get into my computers safe mode", "Safe mode", "What can i do?, my computer into safe mode?" ],
+          "responses": [ "To get into the Windows 7 / 10 Safe mode, as the computer is starting up press and hold your F8 Key which should bring up the Windows Advanced Options Menu. Use your arrow keys to move to Safe Mode and press your Enter key." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Update",
+          "patterns": [ "How can I update my Microsoft Windows computer?", "Update window", "What can i do?, my computer to update window?" ],
+          "responses": [ "If you are running Microsoft Windows 7, Windows 10, or a later version of Microsoft Windows, you are eligible to update Microsoft Windows, and in some cases, your computer hardware with the latest drivers through Microsoft's update site, visit http://windowsupdate.microsoft.com. In most cases your computer should be set to automatically update when a new update becomes available." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Turn off window without doing a shut down",
+          "patterns": [ "Is it safe to turn off a Windows computer without doing a shut down?", "Turn off a Windows computer without doing a shut down?" ],
+          "responses": [ "Users should not simply press the power button or restart the computer while Windows is still running unless there is an issue with the computer. Microsoft has included the shut down feature because it enables a computer to go through all the necessary steps that are required before turning off the computer. In fact many versions of Microsoft Windows will check the computer for any problems if the computer is not shut down properly." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Recover file",
+          "patterns": [ "How can I recover a file from the recycle bin?", "Recover file from recycle bin", "What can i do?, to recover my file from the recycle bin?" ],
+          "responses": [ "Double click the recycle bin icon on your desktop, here you will see all of the files within your bin. Select the files you wish to recover, right click and choose restore." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Email Unable",
+          "patterns": [ "I am unable to send or receive email?", "Email cannot send", "Email cannot receive" ],
+          "responses": [ "Verify that your computer is able to see the Internet and/or other computers to ensure that your computer is not encountering a connection issue, which would be causing your e-mail issue. Ensure that your Internet e-mail server or your Network e-mail server is not encountering issues by contacting either your Internet Service Provider or your Network administrator." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Email attachments",
+          "patterns": [ "I can't receive any email attachments?", "email attachments problems" ],
+          "responses": [ "If the e-mail box is full of other e-mail messages, and/or your storage space is only a few megabytes, it's possible that the attachment being sent cannot be received. Often if this problem is occurring the person sending the e-mail should get a response back from your e-mail server indicating that your mailbox is full and/or has exceeded its allocated size. Because computer viruses and other malware are best distributed through e-mail, many e-mail service providers, companies, and e-mail programs prevent certain types of file extensions from being distributed or received through e-mail. For example, Microsoft Outlook protect its users by automatically disabling certain file extension types from being received in e-mail." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Space in emails",
+          "patterns": [ "Are spaces allowed in email addresses?" ],
+          "responses": [ "Just like an Internet URL no spaces are allowed in an e-mail address. However, names can be broken up using a period; for example, John Smith may have an e-mail address: john.smith@example.com or john.s@example.com because no spaces are allowed in the e-mail address." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Printer Jam",
+          "patterns": [ "How do I fix a paper jam?","Printer paper jam" ],
+          "responses": [ "Turn off the printer. Inspect the location or tray the printed paper ejects to. If the stuck paper is visible manually remove it. Remove all paper trays and any paper that may be stuck between the tray and the printer. If the stuck paper is visible manually remove it. Open the printer door that allows you access to the printer ink cartridges or toner and look for any stuck paper. If the stuck paper is visible manually remove it. Turn the printer back on." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Printer smudged/distorted pages",
+          "patterns": [ "My printer is printing smudged/distorted pages, what can I do?", "printer smudged/distorted pages ", "printer distorted pages ", "printer smudged pages "],
+          "responses": [ "When printing on untraditional paper your printer may experience smudges, un-even or crooked text, and/or text that runs off the edges of the paper. Your printer may be printing fuzzy, blurry, and/or other faint text because of dirty print heads. All modern printers have some type of printer cleaning, self-test, and/or diagnose mode that can be performed to check and clean the printers print heads and other internal equipment used to print." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Printer Installation",
+          "patterns": [ "I lost my printer installation disk, how can I install my printer?", "Printer software missing", "Printer software uninstall, what can i do?" ],
+          "responses": [ "Thankfully a missing printer installation disk is not the end of the world and will not require you to wait until a new disk can be sent to you. Today all printer and other hardware manufacturers are providing downloads on the Internet to their software programs and drivers that are included with their products." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Network Problems",
+          "patterns": [ "I can't connect to my network drive anymore, what can I do?", "Network driving not working", "What can i do?, i cannot connect to my network driver" ],
+          "responses": [ "Verify that the network cable is properly connected to the back of the computer. In addition, when checking the connection of the network cable, ensure that the LED's on the network are properly illuminated. For example, a network card with a solid green LED or light usually indicates that the card is either connected or receiving a signal. Note: generally, when the green light is flashing, this is an indication of data being sent or received." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Network name",
+          "patterns": [ "How do I determine my computer's name?", "Network name", "What can i do?, to find my network name" ],
+          "responses": [ "Right-click My Computer. Click Properties. In the Properties window, click the Computer Name tab. Within this tab you'll be able to see the full computer name, workgroup and also a description. If you wish to change the name or workgroup, click the Change button." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Computer Virus",
+          "patterns": [ "What is a computer virus?" ],
+          "responses": [ "A computer virus is a software program that has been intentionally created to cause a user grief, spread to other computers, or destroy data on an individual's computer. To help prevent a computer from becoming infected by a virus, software developers have developed anti virus programs that stay active on the computer helping to protect it. It is important to realize that many computers do not come pre-loaded with these already installed and that if computers do come with these programs, the programs may expire within 90 days." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Window Defender",
+          "patterns": [ "Does Windows come with a virus protection program?" ],
+          "responses": [ "All versions of Microsoft Windows do not come pre-installed with a virus protection program. This includes: Microsoft Windows 7 and Windows 10." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Format Virus",
+          "patterns": [ "If I format or erase my hard drive will it remove a virus?", "Will format computer remove anti virus" ],
+          "responses": [ "If your computer is infected with a virus formatting or erasing the hard disk drive and starting over will almost always remove any type of virus. However, keep in mind if backups have been made that contain the virus, other media or drives connected to the computer have a virus, your computer is connected to another computer on a network with a virus, and/or the virus is stored on some other type of software you use with your computer it can become re-infected if not properly protected." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Cookies",
+          "patterns": [ "How do I delete Internet cookies?", "Remove cookies" ],
+          "responses": [ "Microsoft Internet Explorer users can go to 'Tools' (or the little cog icon in the top left), then go to 'Safety' and choose 'Delete browsing history...', you can then choose to delete your Internet cookies. In Google Chrome, go to 'More Tools' and choose 'Clear browsing data...'. Firefox users can go to 'History', then choose 'Clear recent history...'." ],
+          "context": [ "" ]
+        },
+
+        {
+          "tag": "Customer Support",
+          "patterns": [ "Can i talk with an customer support provider?", "Can i talk with an customer support admin?","i would like to talk to an person","Customer Support" ],
+          "responses": [ "You can contact via HP: 0172388888 or send us an email: 0121639@kdu-online.com or press the button on the main desk for help" ],
+          "context": [ "" ]
+        }
+   ]
+}

@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+    background-color: cornflowerblue;
+  }
+
+base{
+    background-color: cornflowerblue; 
+}
+
+
+.container{
+
+    box-sizing: border-box;
+    width: 500;
+    height: 500;
+    position: static;
+    display: flex;
+    align-items: center;
+
+}
+
+.alert-alert-primary{
+
+    background-color: cornflowerblue;
+}
