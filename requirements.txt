@@ -8,8 +8,6 @@ keras==2.4.3
 keras-adamw==1.36
 mkl-fft
 mkl-random
-nb-conda
-nb-conda-kernels
 nltk==3.5
 packaging==20.4
 pickle-mixin==1.0.2
