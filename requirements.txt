@@ -6,9 +6,9 @@ jsonpickle==1.4.1
 jupyter-kernel-gateway==2.4.2
 keras==2.4.3
 keras-adamw==1.36
-mkl-fft==1.1.0
-mkl-random==1.1.1
-mkl-service==2.3.0
+mkl-fft
+mkl-random
+mkl-service
 mysql-connector-python==8.0.18
 nb-conda==2.2.1
 nb-conda-kernels==2.2.4
