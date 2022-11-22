@@ -8,7 +8,7 @@ keras==2.4.3
 keras-adamw==1.36
 mkl-fft
 mkl-random
-nltk==3.5
+nltk==3.6.6
 packaging==20.4
 pickle-mixin==1.0.2
 pip-chill==1.0.0
